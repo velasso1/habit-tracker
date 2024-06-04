@@ -1,0 +1,21 @@
+// IMPORT FONTS
+@import './fonts.scss';
+// ============================================
+
+// IMPORT RESET STYLES
+@import "reset.scss";
+// ============================================
+
+// GENERAL STYLES
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #0F1119;
+    color: #ffffff;
+}
+// ============================================
+
+// IMPORT COMPONENT STYLES
+@import './header.scss';
+@import './start-page.scss';
+// ============================================
+ 
