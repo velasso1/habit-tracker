@@ -1,5 +1,5 @@
 // IMPORT FONTS
-@import './fonts.scss';
+@import "./fonts.scss";
 // ============================================
 
 // IMPORT RESET STYLES
@@ -8,14 +8,20 @@
 
 // GENERAL STYLES
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #0F1119;
-    color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  //   background-color: #0f1119;
+  background: rgb(29, 34, 52);
+  background: radial-gradient(
+    circle,
+    rgba(29, 34, 52, 1) 0%,
+    rgba(15, 17, 25, 1) 100%
+  );
+  color: #ffffff;
 }
 // ============================================
 
 // IMPORT COMPONENT STYLES
-@import './header.scss';
-@import './start-page.scss';
+@import "./header.scss";
+@import "./start-page.scss";
+@import "./button.scss";
 // ============================================
- 

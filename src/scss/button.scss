@@ -1,0 +1,20 @@
+.button {
+  background: rgb(5, 225, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(5, 225, 255, 1) 0%,
+    rgba(129, 184, 255, 1) 30%,
+    rgba(110, 65, 206, 1) 87%
+  );
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px 37px;
+  border-radius: 9px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
