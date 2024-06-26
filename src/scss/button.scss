@@ -13,8 +13,8 @@
   padding: 8px 37px;
   border-radius: 9px;
   transition: 0.3s;
-}
 
-.button:hover {
-  transform: scale(1.05);
+  &:hover {
+    transform: scale(1.05);
+  }
 }

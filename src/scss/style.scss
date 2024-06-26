@@ -20,8 +20,14 @@ body {
 }
 // ============================================
 
+// IMPORT MIXINS
+@import "./mixins.scss";
+// ============================================
+
 // IMPORT COMPONENT STYLES
 @import "./header.scss";
-@import "./start-page.scss";
+@import "./footer.scss";
+@import "./page-styles/start-page.scss";
+@import "./page-styles/registration-page.scss";
 @import "./button.scss";
 // ============================================

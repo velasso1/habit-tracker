@@ -1,6 +1,6 @@
 import { FC } from "react";
-import Button from "../components/ui/button";
 import { Link } from "react-router-dom";
+import Button from "../components/ui/button";
 
 const StartPage: FC = () => {
   return (
@@ -11,20 +11,25 @@ const StartPage: FC = () => {
       <div className="start__subtitle">
         <p>
           Это{" "}
-          <span style={{ color: "#6E41CE" }}>персональное пространство</span>{" "}
+          <span className="start__highlight-subtitle">
+            персональное пространство
+          </span>{" "}
           для отслеживания привычек
         </p>
       </div>
       <div className="start__subtitle">
         <p>
-          Выбери <span style={{ color: "#6E41CE" }}>цели</span> и добавь их в
-          список
+          Выбери <span className="start__highlight-subtitle">цели</span> и
+          добавь их в список
         </p>
       </div>
       <div className="start__subtitle">
         <p>
           Отмечай выполненные задачи и{" "}
-          <span style={{ color: "#6E41CE" }}>наблюдай за прогрессом</span>!
+          <span className="start__highlight-subtitle">
+            наблюдай за прогрессом
+          </span>
+          !
         </p>
       </div>
       <div className="start__button">

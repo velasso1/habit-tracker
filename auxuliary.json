@@ -1,0 +1,11 @@
+{
+  "textFields": [
+    { "type": "text", "name": "name", "labelText": "Введи своё имя" },
+    { "type": "email", "name": "email", "labelText": "Теперь введи почту" },
+    {
+      "type": "password",
+      "name": "pass",
+      "labelText": "Осталось придумать пароль"
+    }
+  ]
+}
