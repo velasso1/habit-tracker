@@ -1,7 +1,8 @@
 import { FC } from "react";
+// import { motion } from "framer-motion";
 
 const CreateTargetPage: FC = () => {
-  return <div className="">create target page</div>;
+  return <div className="create-target"></div>;
 };
 
 export default CreateTargetPage;

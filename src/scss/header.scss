@@ -8,6 +8,18 @@
     cursor: pointer;
   }
 
+  &__logo {
+    width: max-content;
+  }
+
+  &__image {
+    width: 35px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   &__button {
     margin-left: 150px;
   }
