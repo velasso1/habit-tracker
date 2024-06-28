@@ -1,9 +1,21 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import TextField from "./ui/text-field";
 import config from "../../auxuliary.json";
 import Button from "./ui/button";
 
+interface userInfo {
+  name: string;
+  email: string;
+  password: string;
+}
+
 const Form: FC = () => {
+  const [userInfo, setUserInfo] = useState<userInfo>({
+    name: "",
+    email: "",
+    password: "",
+  });
+
   return (
     <>
       {config.textFields.map((item, index) => {

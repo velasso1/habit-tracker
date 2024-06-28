@@ -14,9 +14,10 @@
 
   &__image {
     width: 35px;
-
+    transition: 2s;
     &:hover {
       cursor: pointer;
+      transform: rotate(360deg);
     }
   }
 

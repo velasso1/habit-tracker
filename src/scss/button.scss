@@ -17,4 +17,12 @@
   &:hover {
     transform: scale(1.05);
   }
+
+  &:disabled {
+    transform: scale(1);
+    color: grey;
+    cursor: not-allowed;
+    background: none;
+    background-color: #544d64;
+  }
 }

@@ -2,8 +2,7 @@
   @include pagesTitle;
 
   &__subtitle {
-    font-size: 16px;
-    text-align: left;
+    @include pagesSubtitle;
     margin: 20px 0 0 0;
   }
 

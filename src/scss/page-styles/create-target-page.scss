@@ -1,0 +1,17 @@
+.create-target {
+  @include pagesTitle;
+
+  &__title {
+    margin: 50px 0 50px 0;
+  }
+
+  &__subtitle {
+    @include pagesSubtitle;
+    margin: 0 0 50px 0;
+    text-align: center;
+  }
+
+  &__button {
+    padding-top: 25px;
+  }
+}
