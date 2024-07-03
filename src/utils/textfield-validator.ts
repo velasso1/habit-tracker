@@ -4,5 +4,5 @@ import {
 } from "../types/validator-types";
 
 export const validator = (userInfo: IValidatorProps): ValidatorReturnValue => {
-  return true;
+  return false;
 };
