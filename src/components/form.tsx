@@ -1,4 +1,5 @@
 import { FC, useState } from "react";
+import { validator } from "../utils/textfield-validator";
 import TextField from "./ui/text-field";
 import config from "../../auxuliary.json";
 import Button from "./ui/button";
