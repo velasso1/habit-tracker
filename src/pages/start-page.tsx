@@ -1,5 +1,7 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { buttonAnimate } from "../utils/animation/motion-variants";
 import Button from "../components/ui/button";
 
 const StartPage: FC = () => {
@@ -32,12 +34,18 @@ const StartPage: FC = () => {
           !
         </p>
       </div>
-      <div className="start__button">
+      <motion.div
+        className="start__button"
+        variants={buttonAnimate}
+        initial="hidden"
+        animate="visible"
+      >
         <Button text={"Начать"} url={"registration"} />
-      </div>
+      </motion.div>
 
       <div className="start__login">
         <p className="start__question">Уже есть аккаунт?</p>
+
         <Link className="start__link" to="/login">
           Войти
         </Link>

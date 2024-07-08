@@ -14,4 +14,21 @@
   &__button {
     padding-top: 25px;
   }
+
+  &__target-name {
+    @include textFieldGroup;
+  }
+
+  &__text-field {
+    @include textField;
+  }
+
+  &__name {
+    display: inline-block;
+    text-transform: lowercase;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
 }

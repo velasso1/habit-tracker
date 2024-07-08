@@ -1,22 +1,32 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { IUserInfo } from "../../components/form";
 
-interface UserSlice {
+interface IUserSlice {
   userName: string;
+  email: string;
+  pass: string;
 }
 
-const initialState: UserSlice = {
-  userName: "unknown",
+const initialState: IUserSlice = {
+  userName: `guest${new Date().getTime()}`,
+  email: "",
+  pass: "",
 };
 
 const user = createSlice({
   name: "user",
   initialState,
   reducers: {
-    getUserName(state, action: PayloadAction<string>) {
-      state.userName = action.payload;
+    getUserInfo(state, action: PayloadAction<IUserInfo>) {
+      if (typeof action.payload === "object") {
+        state.userName = action.payload.name;
+        state.email = action.payload.email;
+        state.pass = action.payload.pass;
+        return;
+      }
     },
   },
 });
 
-export const { getUserName } = user.actions;
+export const { getUserInfo } = user.actions;
 export default user.reducer;

@@ -1,37 +1,54 @@
 import { FC, useState } from "react";
-import { validator } from "../utils/textfield-validator";
+// import { validator } from "../utils/textfield-validator";
+import { useAppDispatch } from "../store";
+import { getUserInfo } from "../store/slices/user";
 import TextField from "./ui/text-field";
-import config from "../../auxuliary.json";
 import Button from "./ui/button";
 
-interface userInfo {
-  name: string;
+import config from "../../auxuliary.json";
+
+export interface IUserInfo {
+  [name: string]: string;
   email: string;
-  password: string;
+  pass: string;
 }
 
 const Form: FC = () => {
-  const [userInfo, setUserInfo] = useState<userInfo>({
+  const dispatch = useAppDispatch();
+  const [userInfo, setUserInfo] = useState<IUserInfo | string>({
     name: "",
     email: "",
-    password: "",
+    pass: "",
   });
+
+  const sendData = (): void => {
+    if (typeof userInfo === "object") {
+      dispatch(getUserInfo(userInfo));
+      return;
+    }
+  };
 
   return (
     <>
-      {config.textFields.map((item, index) => {
-        return (
-          <TextField
-            key={index}
-            type={item.type}
-            name={item.name}
-            labelText={item.labelText}
-          />
-        );
-      })}
-
-      <div className="form__button">
-        <Button text={"Дальше"} url={"create-target"} />
+      <div className="registration__text-field-group">
+        <form className="registration__form" action="submit">
+          {config.textFields.map((item, index) => {
+            return (
+              <TextField
+                key={index}
+                type={item.type}
+                inputName={item.name}
+                page={"registration"}
+                labelText={item.labelText}
+                userInfo={userInfo}
+                setUserInfo={setUserInfo}
+              />
+            );
+          })}
+          <div className="registration__button" onClick={() => sendData()}>
+            <Button text={"Дальше"} url={"create-target"} type={"button"} />
+          </div>
+        </form>
       </div>
     </>
   );
